@@ -12,7 +12,7 @@ const Home = () => {
             I'm a Full Stack Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          I enjoy exploring new perspectives and approaches to thinking, creativity and  problem-solving, even for seemingly trivial or complex issues, as they can often lead to significant benefits for the larger context.
+          I enjoy exploring new perspectives and approaches to thinking creativitly to problem-solving complex issues or seemingly trivial once, as they can often lead to significant benefits for the larger context.
 
 As a software engineer, I'm constantly learning about new tools and techniques to enhance the frameworks that we have today. I'm passionate about using these tools to solve problems and create value for the end-user.
           </p>
