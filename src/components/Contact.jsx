@@ -15,7 +15,7 @@ function Contact() {
 
         <div className=" flex justify-center items-center">
 
-          <form action="" className=" flex flex-col w-full md:w-1/2">
+          <form action="https://getform.io/f/a521a102-d98e-41c3-b35c-f658cbf2d797" method="POST" className=" flex flex-col w-full md:w-1/2">
             <input type="text" name="name" placeholder="Enter your name" className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"/>
             <input type="text" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"/>
             <textarea name="message" placeholder="Enter your message" rows="10" className="p2 bg-transparent border-2 rounded-md text-white focus:outline-none" ></textarea>
