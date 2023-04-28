@@ -32,7 +32,7 @@ const Portfolio = () => {
       src: reactSmooth
     },
     {
-      id:5,
+      id:6,
       src: reactWeather
     },
    

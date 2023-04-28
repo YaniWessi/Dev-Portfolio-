@@ -10,7 +10,7 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full px-8">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a Full Stack Developer
+            I'm a software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
           I enjoy exploring new perspectives and approaches to thinking creativitly to problem-solving complex issues or seemingly trivial once, as they can often lead to significant benefits for the larger context.
