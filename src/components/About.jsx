@@ -26,3 +26,4 @@ At Propel, I improved internal CMS tools and created a new geolocation tool for 
 }
 
 export default About
+ 
