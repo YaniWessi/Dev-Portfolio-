@@ -13,7 +13,7 @@ const Home = () => {
             Software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          I am an experienced software engineer with experience in React, Flask, Python, Javascript, Node.js just to name a few. I bring my experience in sales, my perspective as a first generation American, and my grit as a New Yorker to my work, finding creative solutions to complex problems.
+          I am a software engineer with experience in React, Flask, Python, Javascript, Node.js just to name a few. I bring my experience in sales, my perspective as a first generation American, and my grit as a New Yorker to my work, finding creative solutions to complex problems.
 I’m a learner at heart. From new tools to new cultures, I am constantly striving to build upon my existing frameworks.
 I’m currently looking for new opportunities and roles.
           </p>
