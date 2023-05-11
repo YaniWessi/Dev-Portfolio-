@@ -10,12 +10,12 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full px-8">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a software Engineer
+            software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          I enjoy exploring new perspectives and approaches to thinking creativitly to problem-solving complex issues or seemingly trivial once, as they can often lead to significant benefits for the larger context.
-
-As a software engineer, I'm constantly learning about new tools and techniques to enhance the frameworks that we have today. I'm passionate about using these tools to solve problems and create value for the end-user.
+          I am an experienced software engineer with experience in React, Flask, Python, Javascript, Node.js just to name a few. I bring my experience in sales, my perspective as a first generation American, and my grit as a New Yorker to my work, finding creative solutions to complex problems.
+I’m a learner at heart. From new tools to new cultures, I am constantly striving to build upon my existing frameworks.
+I’m currently looking for new opportunities and roles.
           </p>
           <div>
             <Link to="portfolio" smooth duration={500} className="group text-white w-fit px-6 py-3 my-10 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">

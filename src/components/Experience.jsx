@@ -8,6 +8,9 @@ import redis from "../assets/redis.png";
 import python from "../assets/python.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import node from "../assets/node.png";
+import postgreSQL from "../assets/postgreSQL.png";
+import flask from "../assets/flask.png";
 
 function Experience() {
 
@@ -52,6 +55,21 @@ function Experience() {
       src:tailwind,
       title: "Tailwind",
       style: "shadow-sky-400"
+    },{
+      id:9,
+      src:node,
+      title: "Node",
+      style: "shadow-green-400"
+    },{
+      id:10,
+      src:postgreSQL,
+      title: "PostgreSQL",
+      style: "shadow-blue-600"
+    },{
+      id:11,
+      src:flask,
+      title: "Flask",
+      style: "shadow-white"
     },
   ]
   return (
