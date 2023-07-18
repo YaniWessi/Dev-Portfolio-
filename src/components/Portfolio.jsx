@@ -1,5 +1,5 @@
 import React from 'react'
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg';
+import dashBoard from '../assets/portfolio/dashBoard.jpg';
 import installNode from '../assets/portfolio/installNode.jpg';
 import NavBar from '../assets/portfolio/NavBar.jpg';
 import reactParallax from '../assets/portfolio/reactParallax.jpg';
@@ -13,7 +13,7 @@ const Portfolio = () => {
   const portfolios = [
     {
       id:1,
-      src: arrayDestruct
+      src: dashBoard
     },
     {
       id:2,
