@@ -1,10 +1,5 @@
 import React from 'react'
 import dashBoard from '../assets/portfolio/dashBoard.jpg';
-import installNode from '../assets/portfolio/installNode.jpg';
-import NavBar from '../assets/portfolio/NavBar.jpg';
-import reactParallax from '../assets/portfolio/reactParallax.jpg';
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg';
-import reactWeather from '../assets/portfolio/reactWeather.jpg';
 
 
 
@@ -14,27 +9,8 @@ const Portfolio = () => {
     {
       id:1,
       src: dashBoard
-    },
-    {
-      id:2,
-      src: installNode
-    },
-    {
-      id:3,
-      src: NavBar
-    },
-    {
-      id:4,
-      src: reactParallax
-    },
-    {
-      id:5,
-      src: reactSmooth
-    },
-    {
-      id:6,
-      src: reactWeather
-    },
+    }
+    
    
   ]
 
@@ -58,7 +34,7 @@ const Portfolio = () => {
                   <img src={src} alt="" className="rounded-md duration-200 hover:scale-105" />
                   <div className="flex items-center justify-center">
                     <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" onClick={handDemoClick}>Demo</button>
-                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Code</button>
+                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"></button>
                   </div>
                 </div>
                 )
