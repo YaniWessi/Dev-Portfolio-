@@ -1,5 +1,6 @@
 import React from 'react'
 import dashBoard from '../assets/portfolio/dashBoard.jpg';
+import betterProfessor from '../assets/portfolio/betterProfessor.jpg';
 
 
 
@@ -9,6 +10,11 @@ const Portfolio = () => {
     {
       id:1,
       src: dashBoard
+    },
+    
+    {
+      id:2,
+      src: betterProfessor
     }
     
    
