@@ -1,7 +1,7 @@
 import React from 'react'
 import dashBoard from '../assets/portfolio/dashBoard.jpg';
 import betterProfessor from '../assets/portfolio/betterProfessor.jpg';
-import { link } from 'mz/fs';
+
 
 
 
@@ -11,22 +11,22 @@ const Portfolio = () => {
     {
       id:1,
       src: dashBoard,
-      code: window.location.href = 'https://github.com/YaniWessi/AdminDashboard.git'
+      code:'https://github.com/YaniWessi/AdminDashboard.git'
     },
     
     {
       id:2,
       src: betterProfessor,
-      code: window.location.href = 'https://github.com/bw-better-professor/frontend.git'
+      code:'https://github.com/bw-better-professor/frontend.git'
     }
     
    
   ]
 
 
-  // const handDemoClick = () => {
-  //       window.location.href = 'https://github.com/YaniWessi/AdminDashboard.git'
-  // }
+  const handleCodeClick = (url) => {
+    window.location.href = url;
+  }
 
   return (
     <div name="portfolio" className="bg-gradient-to-b from-black to-gray-800 w-full pb-96 text-white md:h-screen">
@@ -42,7 +42,7 @@ const Portfolio = () => {
                 <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
                   <img src={src} alt="" className="rounded-md duration-200 hover:scale-105" />
                   <div className="flex items-center justify-center">
-                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" onClick={code}>Code</button>
+                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" onClick={() => handleCodeClick(code)}>Code</button>
                     <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"></button>
                   </div>
                 </div>
