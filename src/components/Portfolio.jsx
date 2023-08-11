@@ -1,6 +1,7 @@
 import React from 'react'
 import dashBoard from '../assets/portfolio/dashBoard.jpg';
 import betterProfessor from '../assets/portfolio/betterProfessor.jpg';
+import phoneStore from '../assets/portfolio/phoneStore.jpg';
 
 
 
@@ -18,6 +19,12 @@ const Portfolio = () => {
       id:2,
       src: betterProfessor,
       code:'https://github.com/bw-better-professor/frontend.git'
+    },
+
+    {
+      id:3,
+      src: phoneStore,
+      code:'https://github.com/YaniWessi/CiteVerte.git'
     }
     
    
@@ -33,7 +40,6 @@ const Portfolio = () => {
       <div className="max-w-screen-lg p-4 pt-44 mx-auto flex flex-col justify-center w-full h-full">
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 border-gray-500">Portfolio</p>
-            <p className="py-6">Coming soon!</p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 sm:px-0">
           {
