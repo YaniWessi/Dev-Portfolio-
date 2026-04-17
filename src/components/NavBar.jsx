@@ -1,71 +1,75 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from "react-scroll"
+import { Link } from 'react-scroll';
+
+const links = [
+  { id: 1, link: 'home' },
+  { id: 2, link: 'about' },
+  { id: 3, link: 'projects' },
+  { id: 4, link: 'experience' },
+  { id: 5, link: 'contact' },
+];
 
 function NavBar() {
+  const [nav, setNav] = useState(false);
 
-  const [ nav, setNav ] = useState(false);
-
-  const links = [
-    {
-      id: 1,
-      link: 'home'
-    },
-    {
-      id: 2,
-      link: 'about'
-    },
-    {
-      id: 3,
-      link: 'portfolio'
-    },
-    {
-      id: 4,
-      link: 'experience'
-    },
-    {
-      id: 5,
-      link: 'contact'
-    },
-  ]
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <nav
+      className="fixed w-full z-50 h-16 flex items-center justify-between px-8"
+      style={{
+        background: 'rgba(8,12,20,0.75)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(74,240,196,0.08)',
+      }}
+    >
+      <span className="font-display text-2xl font-black" style={{ color: 'var(--accent)' }}>
+        YW
+      </span>
 
-      <div>
-        <h1 className="text-5xl font-signature ml-2">Yannick</h1>
-      </div>
-
-
-      <ul className="hidden md:flex">
-         {/* destructuring for link to what actually being used {id link} */}
-        {links.map(({id, link}) => {
-          return(
-            <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200" key={id}><Link to={link} smooth duration={500}>{link}</Link></li>
-          )
-        })}
+      <ul className="hidden md:flex gap-8">
+        {links.map(({ id, link }) => (
+          <li key={id}>
+            <Link to={link} smooth duration={500} className="nav-link">
+              {link}
+            </Link>
+          </li>
+        ))}
       </ul>
 
+      <button
+        onClick={() => setNav(!nav)}
+        className="md:hidden cursor-pointer"
+        style={{ color: 'var(--muted)' }}
+      >
+        {nav ? <FaTimes size={20} /> : <FaBars size={20} />}
+      </button>
 
-   
-      <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} /> }
-      </div>
-
-      
-      
       {nav && (
-      <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-        {links.map(({id, link}) => {
-           return(
-            <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl"><Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link></li>
-           )
-        })}
-      </ul>
-      )}  
-
-
-    </div>
-  )
+        <ul
+          className="absolute top-16 left-0 w-full flex flex-col items-center gap-7 py-10 md:hidden"
+          style={{
+            background: 'var(--surface)',
+            borderBottom: '1px solid rgba(74,240,196,0.08)',
+          }}
+        >
+          {links.map(({ id, link }) => (
+            <li key={id}>
+              <Link
+                to={link}
+                smooth
+                duration={500}
+                onClick={() => setNav(false)}
+                className="nav-link"
+              >
+                {link}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
 }
 
-export default NavBar
+export default NavBar;

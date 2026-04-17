@@ -5,11 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      signature: ["Great Vibes"],
-    }
+    extend: {
+      colors: {
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        accent: 'var(--accent)',
+        accent2: 'var(--accent2)',
+        foreground: 'var(--text)',
+        muted: 'var(--muted)',
+      },
+      fontFamily: {
+        display: ['Playfair Display', 'serif'],
+        body: ['DM Sans', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }
-
