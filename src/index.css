@@ -1,13 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #080c14;
+  --surface: #0f1520;
+  --accent: #4af0c4;
+  --accent2: #5b8af5;
+  --text: #e8edf5;
+  --muted: #6b7a99;
+}
+
 @layer base {
   html {
-    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
   }
+  body {
+    background-color: var(--bg);
+  }
+}
+
+.nav-link {
+  color: var(--muted);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: var(--accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(74, 240, 196, 0.4) !important;
 }

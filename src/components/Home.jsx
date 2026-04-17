@@ -1,38 +1,92 @@
-import React from 'react'
-import yannickImage from "../assets/Yannick.jpg";
-import { RiArrowRightSLine } from 'react-icons/ri';
-import { Link } from "react-scroll";
+import React from 'react';
+import yannickImage from '../assets/Yannick.jpg';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
-    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800" >
-    
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full px-8">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            Software Engineer
-          </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-          I am a software engineer with experience in React, Flask, Python, Javascript, Node.js just to name a few. I bring my experience in sales, my perspective as a first generation American, and my grit as a New Yorker to my work, finding creative solutions to complex problems.
-I’m a learner at heart. From new tools to new cultures, I am constantly striving to build upon my existing frameworks.
-I’m currently looking for new opportunities and roles.
+    <div name="home" className="min-h-screen w-full flex items-center" style={{ background: 'var(--bg)' }}>
+      <div className="max-w-screen-lg mx-auto px-8 pt-24 pb-16 flex flex-col md:flex-row items-center gap-16 w-full">
+
+        {/* Text */}
+        <div className="flex-1 flex flex-col gap-6">
+
+          {/* Available pill */}
+          <div
+            className="w-fit flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs uppercase tracking-widest"
+            style={{
+              border: '1px solid var(--accent)',
+              color: 'var(--accent)',
+              background: 'rgba(74,240,196,0.06)',
+            }}
+          >
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--accent)' }} />
+            Available for new opportunities
+          </div>
+
+          {/* Heading */}
+          <h1 className="font-display text-4xl sm:text-5xl font-black leading-tight" style={{ color: 'var(--text)' }}>
+            Customer-Focused<br />Software Engineer
+          </h1>
+
+          {/* Bio */}
+          <p className="text-base leading-relaxed max-w-md font-body" style={{ color: 'var(--muted)' }}>
+            I'm an engineer at the intersection of code and customer outcomes. With a background bridging sales,
+            support, and full-stack engineering, I write SQL, ship React interfaces, and design the workflows
+            that hold products together.
           </p>
-          <div>
-            <Link to="portfolio" smooth duration={500} className="group text-white w-fit px-6 py-3 my-10 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
-              portfolio
-              <span className="group-hover:rotate-90 duration-300">
-              <RiArrowRightSLine size={25} className="ml-1"/>
-              </span>
+
+          {/* Stat badges */}
+          <div className="flex gap-3 flex-wrap">
+            <span
+              className="px-4 py-2 rounded-lg font-mono text-xs"
+              style={{ background: 'var(--surface)', color: 'var(--accent2)', border: '1px solid rgba(91,138,245,0.2)' }}
+            >
+              ⚡ Full-Stack
+            </span>
+            <span
+              className="px-4 py-2 rounded-lg font-mono text-xs"
+              style={{ background: 'var(--surface)', color: 'var(--accent2)', border: '1px solid rgba(91,138,245,0.2)' }}
+            >
+              📍 NYC
+            </span>
+          </div>
+
+          {/* CTAs */}
+          <div className="flex gap-4 flex-wrap mt-2">
+            <Link
+              to="projects"
+              smooth
+              duration={500}
+              className="px-6 py-3 rounded-md font-body font-medium text-sm cursor-pointer transition-opacity hover:opacity-80"
+              style={{ background: 'var(--accent)', color: 'var(--bg)' }}
+            >
+              View Portfolio
+            </Link>
+            <Link
+              to="contact"
+              smooth
+              duration={500}
+              className="px-6 py-3 rounded-md font-body font-medium text-sm cursor-pointer transition-opacity hover:opacity-80"
+              style={{ border: '1px solid var(--accent)', color: 'var(--accent)', background: 'transparent' }}
+            >
+              Let's Talk
             </Link>
           </div>
         </div>
-          <div>
-            <img src={yannickImage} alt="my profile" className="rounded-2xl mx-auto w-2/3 md:w-full"/>
-          </div>
+
+        {/* Photo — first on mobile, right on desktop */}
+        <div className="flex-shrink-0 order-first md:order-last">
+          <img
+            src={yannickImage}
+            alt="Yannick Wessidjam"
+            className="rounded-2xl w-64 md:w-80 object-cover"
+            style={{ border: '2px solid rgba(74,240,196,0.15)' }}
+          />
+        </div>
+
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;

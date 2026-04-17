@@ -1,69 +1,69 @@
 import React from 'react';
-import {FaGithub, FaLinkedin} from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi';
-import {BsFillPersonLinesFill} from 'react-icons/bs';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+
+const links = [
+  {
+    id: 1,
+    label: 'LinkedIn',
+    icon: <FaLinkedin size={16} />,
+    href: 'https://www.linkedin.com/in/yannickw/',
+    style: 'rounded-tr-md',
+  },
+  {
+    id: 2,
+    label: 'GitHub',
+    icon: <FaGithub size={16} />,
+    href: 'https://github.com/YaniWessi',
+  },
+  {
+    id: 3,
+    label: 'Email',
+    icon: <HiOutlineMail size={16} />,
+    href: 'mailto:yannickwessidjam@gmail.com',
+  },
+  {
+    id: 4,
+    label: 'Resume',
+    icon: <BsFillPersonLinesFill size={16} />,
+    href: '/YannickWessidjamResume.pdf',
+    style: 'rounded-br-md',
+    download: true,
+  },
+];
 
 const SocialLinks = () => {
-
-  const links = [
-    {
-      id:1,
-      child:(
-        <>
-         LinkedIn <FaLinkedin size={30}/>
-        </>
-      ),
-      href: 'https://www.linkedin.com/in/yannickw/',
-      style: 'rounded-tr-md'
-    },
-    {
-      id:2,
-      child:(
-        <>
-         GitHub <FaGithub size={30}/>
-        </>
-      ),
-      href: 'https://github.com/YaniWessi',
-      
-    },
-    {
-      id:3,
-      child:(
-        <>
-         Email <HiOutlineMail size={30}/>
-        </>
-      ),
-      href: 'mailto:yannickwessidjam@gmail.com',
-    },
-    {
-      id:4,
-      child:(
-        <>
-         Resume <BsFillPersonLinesFill size={30}/>
-        </>
-      ),
-      href: '/YannickWessidjamResume.pdf',
-      style: 'rounded-br-md',
-      download: true,
-    },
-  ]
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed z-40">
       <ul>
-       {links.map(({id, child, href, style, download}) => {
-         return(
-
-          <li key={id} className={"flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" + " " + style}>
-          <a href={href} className="flex justify-between items-center w-full text-white" download={download} target='_blank' rel="noreferrer">
-            {child}
-          </a>
-        </li>
-
-         )
-       })}   
+        {links.map(({ id, label, icon, href, style, download }) => (
+          <li
+            key={id}
+            className={'flex items-center w-36 h-11 px-4 ml-[-96px] hover:ml-[-8px] duration-300 ' + (style || '')}
+            style={{
+              background: 'var(--surface)',
+              borderRight: '1px solid rgba(74,240,196,0.2)',
+              borderTop: '1px solid rgba(74,240,196,0.06)',
+              borderBottom: '1px solid rgba(74,240,196,0.06)',
+            }}
+          >
+            <a
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              download={download}
+              className="flex items-center gap-2 w-full font-mono text-xs uppercase tracking-wider"
+              style={{ color: 'var(--muted)' }}
+            >
+              <span style={{ color: 'var(--accent)' }}>{icon}</span>
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;
